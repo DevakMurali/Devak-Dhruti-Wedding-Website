@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+  /* ── FONTS ── */
+  --font-script:  'Pinyon Script', cursive;
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Montserrat', sans-serif;
+
+  /* ── COLOR: Neutral ── */
+  --white:      #FFFFFF;
+  --ivory:      #FAF7F2;
+  --linen:      #F2EBE0;
+  --parchment:  #E8DDD0;
+  --bark:       #2C2420;
+  --mist:       #7A6860;
+
+  /* ── COLOR: Pink / Rose ── */
+  --petal:      #F7E8E4;
+  --blush:      #EDCFC8;
+  --dusty-rose: #D4917A;
+  --deep-rose:  #C47060;
+
+  /* ── COLOR: Apricot / Terracotta ── */
+  --peach:      #FAEAD8;
+  --apricot:    #E8B48A;
+  --terracotta: #C4834A;
+  --sienna:     #8C5230;
+
+  /* ── COLOR: Sage / Green ── */
+  --mist-green: #DDE8D8;
+  --sage:       #8FAE8A;
+  --garden:     #4A7248;
+  --foliage:    #2C4A2A;
+
+  --border: rgba(44,36,32,0.1);
+
+  /* ── LETTER SPACING ── */
+  --tracking-tight: 0.01em;
+  --tracking-sm:    0.06em;
+  --tracking-md:    0.12em;
+  --tracking-lg:    0.14em;
+  --tracking-xl:    0.16em;
+  --tracking-2xl:   0.18em;
+  --tracking-3xl:   0.20em;
+  --tracking-4xl:   0.22em;
+  --tracking-5xl:   0.24em;
+  --tracking-6xl:   0.28em;
+
+  /* ── LINE HEIGHTS ── */
+  --leading-tightest: 1.05;
+  --leading-tight:    1.1;
+  --leading-snug:     1.2;
+  --leading-normal:   1.75;
+  --leading-relaxed:  1.8;
+  --leading-loose:    1.85;
+  --leading-looser:   1.9;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--bark);
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+
+.title {
+  font-family: var(--font-script);
+  font-size: 96px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: var(--leading-tightest);
+  letter-spacing: var(--tracking-tight);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: var(--tracking-4xl);
+  text-transform: uppercase;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+.heading-sm {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: -0.01em;
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-2xl);
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: var(--leading-loose);
+}
+
+/* ── ANIMATIONS ── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible  { opacity: 1; transform: translateY(0); }
+.reveal-delay-1  { transition-delay: 0.1s; }
+.reveal-delay-2  { transition-delay: 0.2s; }
+.reveal-delay-3  { transition-delay: 0.3s; }
+
+/* ── NEW: Nav link text ── */
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-3xl);
+  text-transform: uppercase;
+}
+
+/* ── NEW: Button text ── */
+.btn-text {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-3xl);
+  text-transform: uppercase;
+}

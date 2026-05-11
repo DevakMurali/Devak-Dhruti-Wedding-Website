@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhruti &amp; Devak</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo title">D &amp; D</a>
+    <ul class="nav-links">
+      <li><a href="#story" class="nav-link">Our Story</a></li>
+      <li><a href="#events" class="nav-link">Events</a></li>
+      <li><a href="#travel" class="nav-link">Travel</a></li>
+      <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow subtitle">We're getting married</span>
+      <h1 class="hero-title title">Dhruti &amp; Devak</h1>
+      <div class="hero-divider">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-diamond"></div>
+        <div class="hero-divider-line"></div>
+      </div>
+      <span class="hero-date subtitle">November 22, 2026</span>
+      <span class="hero-location subtitle">Laurel, Maryland</span>
+      <div class="hero-cta">
+        <a href="#rsvp" class="btn btn-primary btn-text">RSVP</a>
+        <a href="#events" class="btn btn-outline btn-text">View Events</a>
+      </div>
+    </div>
+    <div class="countdown-bar">
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" id="cd-days">--</span>
+        <span class="countdown-label subheading">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" id="cd-hours">--</span>
+        <span class="countdown-label subheading">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" id="cd-mins">--</span>
+        <span class="countdown-label subheading">Minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" id="cd-secs">--</span>
+        <span class="countdown-label subheading">Seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="photo-strip-inner">
+      <div class="photo-block">
+        <img src="images/couple/KrystaNormanPhotography_DevakMurali_Proposal-50.jpg"
+             alt="Dhruti and Devak at the vineyard"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder title" style="display:none;">Your photo here</div>
+      </div>
+      <div class="photo-block photo-block-center">
+        <img src="images/couple/KrystaNormanPhotography_DevakMurali_Proposal-50.jpg"
+             alt="Dhruti and Devak"
+             style="object-position: center center;"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder title" style="display:none;">Your photo here</div>
+        <div class="photo-caption"><span class="title">Est. Summer 2022</span></div>
+      </div>
+      <div class="photo-block">
+        <img src="images/venue/3368BA88-98EE-4AE6-BDEA-4349BAC7FCDE.PNG"
+             alt="Floral arrangement"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder title" style="display:none;">Floral inspo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR STORY -->
+  <section class="story-section" id="story">
+    <div class="section-inner">
+      <div class="story-grid">
+        <div class="story-img reveal">
+          <div class="story-img-frame">
+            <img src="images/couple/KrystaNormanPhotography_DevakMurali_Proposal-50.jpg"
+                 alt="Dhruti and Devak at the vineyard"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.story-img-frame-placeholder').style.display='block';">
+            <div class="story-img-frame-placeholder title" style="display:none;">D &amp; D</div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow subheading reveal">Our Story</span>
+          <h2 class="section-heading heading reveal">How it all <em>began</em></h2>
+          <div class="thin-rule reveal"></div>
+          <p class="body paragraph reveal">We met at the gym in the summer of 2022 — two people who had no idea that a chance encounter would turn into something extraordinary. What started as early morning workouts quickly became evening walks, weekend adventures, and the kind of conversations that stretch past midnight.</p>
+          <br>
+          <p class="body paragraph reveal reveal-delay-1">Four years later, we're ready to begin the greatest adventure yet. We're so grateful you'll be there to celebrate with us as we take this next step together.</p>
+          <div class="story-date-badge reveal reveal-delay-2">
+            <div class="badge-dot"></div>
+            <span class="subheading">Engaged · April 25, 2026</span>
+            <div class="badge-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events-section" id="events">
+    <div class="section-inner">
+      <span class="eyebrow subheading reveal">Celebrations</span>
+      <h2 class="section-heading heading reveal">Join us for <em>every moment</em></h2>
+      <div class="events-grid">
+
+        <div class="event-card reveal">
+          <div class="event-accent-bar"></div>
+          <span class="event-num subheading">01 · Friday</span>
+          <p class="event-name heading">Mehndi &amp; Sangeet</p>
+          <span class="event-date subheading">November 2026 · Evening</span>
+          <p class="event-detail paragraph">An evening of music, dancing, and henna. Come dressed in your finest festive wear and ready to celebrate the night away.</p>
+          <span class="event-tag">🌿 All guests welcome</span>
+        </div>
+
+        <div class="event-card reveal reveal-delay-1">
+          <div class="event-accent-bar"></div>
+          <span class="event-num subheading">02 · Saturday</span>
+          <p class="event-name heading">Wedding Ceremony</p>
+          <span class="event-date subheading">November 2026 · 5:00 PM</span>
+          <p class="event-detail paragraph">The main event. A traditional Hindu ceremony followed by our reception dinner and dancing well into the night.</p>
+          <span class="event-tag">🌿 All guests welcome</span>
+        </div>
+
+        <div class="event-card reveal reveal-delay-2">
+          <div class="event-accent-bar"></div>
+          <span class="event-num subheading">03 · Sunday</span>
+          <p class="event-name heading">Brunch Send-off</p>
+          <span class="event-date subheading">November 2026 · 11:00 AM</span>
+          <p class="event-detail paragraph">A relaxed morning after to share one last meal with our closest family and friends before we head off on our honeymoon.</p>
+          <span class="event-tag event-tag-rose">✦ Immediate family</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVEL -->
+  <section class="travel-section" id="travel">
+    <div class="section-inner">
+      <span class="eyebrow subheading reveal">Plan Your Visit</span>
+      <h2 class="section-heading heading reveal">Getting <em>here</em></h2>
+      <div class="travel-grid">
+
+        <div class="travel-card reveal">
+          <span class="travel-icon">🏨</span>
+          <p class="travel-title heading">Where to Stay</p>
+          <p class="travel-detail paragraph">We've reserved a room block at a nearby hotel for out-of-town guests. Use code <strong>DDWED26</strong> when booking for a discounted rate. Rooms are limited — book early!</p>
+          <a href="#" class="travel-link subheading">Book your room →</a>
+        </div>
+
+        <div class="travel-card reveal reveal-delay-1">
+          <span class="travel-icon">✈️</span>
+          <p class="travel-title heading">Getting Here</p>
+          <p class="travel-detail paragraph">The venue is conveniently located near Laurel, MD — about 30 minutes from both BWI and DCA airports. Rideshare is available and parking is complimentary on site.</p>
+          <a href="#" class="travel-link subheading">View directions →</a>
+        </div>
+
+        <div class="travel-card reveal reveal-delay-2">
+          <span class="travel-icon">🗺️</span>
+          <p class="travel-title heading">Things To Do</p>
+          <p class="travel-detail paragraph">The DC/Maryland area has no shortage of things to explore. We'll be sharing a full guide of our favorite restaurants, spots, and activities for the weekend.</p>
+          <a href="#" class="travel-link subheading">View our guide →</a>
+        </div>
+
+        <div class="travel-card reveal reveal-delay-3">
+          <span class="travel-icon">🌸</span>
+          <p class="travel-title heading">Dress Code</p>
+          <p class="travel-detail paragraph">Festive Indian wear for the Mehndi &amp; Sangeet. Traditional or formal Western attire for the Wedding Ceremony. When in doubt — more color is always welcome.</p>
+          <a href="#" class="travel-link subheading">Full dress guide →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section" id="rsvp">
+    <div class="section-inner">
+      <span class="eyebrow subheading reveal">You're invited</span>
+      <h2 class="section-heading heading reveal">Kindly <em style="color:var(--blush);">reply</em></h2>
+      <div class="thin-rule reveal"></div>
+      <p class="body paragraph reveal">Enter your name below to see which events you've been invited to and confirm your attendance. Please RSVP by September 1, 2026.</p>
+      <div class="rsvp-form reveal">
+        <input class="rsvp-input paragraph" type="text" id="rsvp-name" placeholder="Enter your full name">
+        <button class="rsvp-btn btn-text" onclick="lookupGuest()">Find me</button>
+      </div>
+      <div id="guest-result" class="paragraph"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo title">D &amp; D</span>
+    <ul class="footer-links">
+      <li><a href="#story" class="nav-link">Our Story</a></li>
+      <li><a href="#events" class="nav-link">Events</a></li>
+      <li><a href="#travel" class="nav-link">Travel</a></li>
+      <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+    </ul>
+    <p class="footer-text subtitle">Dhruti &amp; Devak · November 2026 · Laurel, Maryland</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,8 +1,13 @@
 // Countdown to wedding date
+const cdDays  = document.getElementById('cd-days');
+const cdHours = document.getElementById('cd-hours');
+const cdMins  = document.getElementById('cd-mins');
+const cdSecs  = document.getElementById('cd-secs');
+
 function updateCountdown() {
-  const wedding = new Date('2026-11-14T17:00:00');
-  const now = new Date();
-  const diff = wedding - now;
+  if (!cdDays) return;
+  const wedding = new Date('2026-11-22T17:00:00');
+  const diff = wedding - new Date();
   if (diff <= 0) return;
 
   const d = Math.floor(diff / 86400000);
@@ -10,10 +15,10 @@ function updateCountdown() {
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
 
-  document.getElementById('cd-days').textContent  = String(d).padStart(2, '0');
-  document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
-  document.getElementById('cd-mins').textContent  = String(m).padStart(2, '0');
-  document.getElementById('cd-secs').textContent  = String(s).padStart(2, '0');
+  cdDays.textContent  = String(d).padStart(2, '0');
+  cdHours.textContent = String(h).padStart(2, '0');
+  cdMins.textContent  = String(m).padStart(2, '0');
+  cdSecs.textContent  = String(s).padStart(2, '0');
 }
 
 updateCountdown();
@@ -59,6 +64,9 @@ function lookupGuest() {
   }
 }
 
-document.getElementById('rsvp-name').addEventListener('keydown', e => {
-  if (e.key === 'Enter') lookupGuest();
-});
+const rsvpInput = document.getElementById('rsvp-name');
+if (rsvpInput) {
+  rsvpInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') lookupGuest();
+  });
+}

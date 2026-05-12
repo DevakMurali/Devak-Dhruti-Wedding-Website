@@ -75,7 +75,7 @@ body {
 
 .title {
   font-family: var(--font-script);
-  font-size: 96px;
+  font-size: 108px;
   font-weight: 400;
   font-style: normal;
   line-height: var(--leading-tightest);
@@ -84,7 +84,7 @@ body {
 
 .subtitle {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: var(--tracking-4xl);
   text-transform: uppercase;
@@ -92,7 +92,7 @@ body {
 
 .heading {
   font-family: var(--font-display);
-  font-size: 48px;
+  font-size: 54px;
   font-weight: 700;
   line-height: var(--leading-tight);
   letter-spacing: -0.01em;
@@ -100,7 +100,7 @@ body {
 
 .heading-sm {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 700;
   line-height: var(--leading-snug);
   letter-spacing: -0.01em;
@@ -108,7 +108,7 @@ body {
 
 .subheading {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: var(--tracking-2xl);
   text-transform: uppercase;
@@ -116,7 +116,7 @@ body {
 
 .paragraph {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   line-height: var(--leading-loose);
 }
@@ -133,15 +133,20 @@ body {
   transform: translateY(20px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
-.reveal.visible  { opacity: 1; transform: translateY(0); }
+.reveal.visible        { opacity: 1; transform: translateY(0); }
+.reveal.slide-left     { transform: translateX(-36px); }
+.reveal.slide-right    { transform: translateX(36px); }
+.reveal.slide-left.visible,
+.reveal.slide-right.visible { opacity: 1; transform: translateX(0); }
 .reveal-delay-1  { transition-delay: 0.1s; }
 .reveal-delay-2  { transition-delay: 0.2s; }
 .reveal-delay-3  { transition-delay: 0.3s; }
+.reveal-delay-4  { transition-delay: 0.15s; }
 
 /* ── NEW: Nav link text ── */
 .nav-link {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: var(--tracking-3xl);
   text-transform: uppercase;
@@ -150,7 +155,7 @@ body {
 /* ── NEW: Button text ── */
 .btn-text {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: var(--tracking-3xl);
   text-transform: uppercase;

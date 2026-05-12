@@ -1,0 +1,12 @@
+.rsvp-page {
+  padding-top: 72px;
+  min-height: 100vh;
+  background: var(--ivory);
+}
+
+#rsvp-embed {
+  width: 100%;
+  height: calc(100vh - 72px);
+  border: none;
+  display: block;
+}

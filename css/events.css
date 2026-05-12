@@ -60,20 +60,82 @@
   display: block;
 }
 
-/* ── TIMELINE ── */
+/* ── PHOTO BANNER ── */
 
-.timeline-section {
-  background: var(--linen);
-  padding: 6rem 2rem 8rem;
+.events-photo-banner {
+  height: 440px;
+  overflow: hidden;
+  background: var(--parchment);
 }
 
-.timeline {
-  max-width: 900px;
+.events-photo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.events-photo-banner.events-photo-missing {
+  display: none;
+}
+
+
+/* ── TIMELINE SECTION ── */
+
+.timeline-section {
+  background: var(--ivory);
+  padding: 5rem 3rem 8rem;
+}
+
+.timeline-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  max-width: 1280px;
   margin: 0 auto;
+  align-items: start;
+}
+
+.timeline-left { min-width: 0; }
+
+.timeline-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events-photo {
+  width: 95%;
+  height: auto;
+  display: block;
+  margin: 1.5rem 0;
+}
+
+.rose-col {
+  width: calc(95% * 0.3);
+  display: block;
+  pointer-events: none;
+  filter: brightness(0) invert(1) sepia(1) saturate(0.65) hue-rotate(335deg) brightness(1.05);
+  opacity: 0.75;
+}
+
+.rose-col--flip {
+  transform: rotate(180deg);
+}
+
+.timeline-hint {
+  color: rgba(212,145,122,0.5);
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+/* ── TIMELINE SPINE ── */
+
+.timeline {
   position: relative;
 }
 
-/* Continuous center line */
 .timeline::before {
   content: '';
   position: absolute;
@@ -85,145 +147,129 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    var(--blush) 6%,
-    var(--blush) 94%,
+    var(--blush) 4%,
+    var(--blush) 96%,
     transparent
   );
   z-index: 0;
 }
 
+/* ── TIMELINE ITEM ── */
+
 .timeline-item {
   display: flex;
   align-items: flex-start;
-  gap: 0;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .timeline-item:last-child { margin-bottom: 0; }
 
-/* Time column */
-.tl-time-col {
+/* Left content block */
+.tl-main {
   flex: 1;
   text-align: right;
-  padding-right: 2.5rem;
-  padding-top: 14px;
+  padding-right: 2.75rem;
+  position: relative;
+  min-width: 0;
 }
 
-.tl-num {
-  color: rgba(212,145,122,0.35);
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.tl-time {
-  color: var(--dusty-rose);
-  display: block;
+/* Arm connector (right side by default) */
+.tl-main::after {
+  content: '';
+  position: absolute;
+  top: 2.95rem;
+  right: 0;
+  width: 2.75rem;
+  height: 0.5px;
+  background: var(--blush);
 }
 
 /* Center marker */
-.tl-marker-col {
-  flex: 0 0 20px;
+.tl-mark {
+  flex: 0 0 14px;
   display: flex;
   justify-content: center;
-  padding-top: 14px;
+  padding-top: 2.6rem;
   position: relative;
   z-index: 1;
 }
 
 .tl-diamond {
-  width: 9px;
-  height: 9px;
-  background: var(--dusty-rose);
+  width: 8px;
+  height: 8px;
+  background: var(--ivory);
+  border: 1px solid var(--dusty-rose);
   transform: rotate(45deg);
   flex-shrink: 0;
-  border: 0.5px solid var(--deep-rose);
-  transition: background 0.2s, transform 0.3s;
+  transition: background 0.25s, border-color 0.25s;
 }
 
-/* Content column */
-.tl-content-col {
+/* Right blank spacer */
+.tl-blank {
   flex: 1;
-  padding-left: 2.5rem;
+  padding-left: 2.75rem;
 }
 
-/* Card */
-.tl-card {
-  background: var(--white);
-  border: 0.5px solid var(--blush);
-  padding: 1.75rem 2rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.25s ease;
-}
+/* ── EVEN ITEMS — flip to right side ── */
 
-.tl-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--dusty-rose);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease;
-}
-
-.tl-card:hover { transform: translateY(-4px); }
-.tl-card:hover::before { transform: scaleX(1); }
-.tl-card:hover + .tl-marker-col .tl-diamond { background: var(--deep-rose); }
-
-/* Feature cards (ceremony & reception) */
-.tl-card-feature {
-  border-color: var(--dusty-rose);
-  background: var(--petal);
-}
-.tl-card-feature::before { background: var(--deep-rose); transform: scaleX(1); }
-
-.tl-title {
-  color: var(--bark);
-  margin-bottom: 0.75rem;
-}
-
-.tl-rule {
-  width: 28px;
-  height: 0.5px;
-  background: var(--blush);
-  margin-bottom: 1rem;
-}
-
-.tl-body {
-  color: var(--mist);
-}
-
-/* ── ALTERNATING: even items flip sides ── */
-
-.timeline-item:nth-child(even) .tl-time-col {
+.timeline-item:nth-child(even) .tl-main {
   order: 3;
   text-align: left;
   padding-right: 0;
-  padding-left: 2.5rem;
+  padding-left: 2.75rem;
 }
 
-.timeline-item:nth-child(even) .tl-marker-col {
+.timeline-item:nth-child(even) .tl-main::after {
+  right: auto;
+  left: 0;
+}
+
+.timeline-item:nth-child(even) .tl-blank {
+  order: 1;
+  padding-left: 0;
+  padding-right: 2.75rem;
+}
+
+.timeline-item:nth-child(even) .tl-mark {
   order: 2;
 }
 
-.timeline-item:nth-child(even) .tl-content-col {
-  order: 1;
-  padding-left: 0;
-  padding-right: 2.5rem;
+/* ── TYPOGRAPHY ── */
+
+.tl-time {
+  color: var(--dusty-rose);
+  display: block;
+  margin-bottom: 0.2rem;
 }
 
-/* Even card accent bar slides from the right */
-.timeline-item:nth-child(even) .tl-card::before {
-  transform-origin: right;
+.tl-title {
+  color: var(--bark);
+  display: block;
+  cursor: default;
+  transition: color 0.2s;
+  line-height: var(--leading-snug);
 }
 
-/* Even card rule aligns right */
-.timeline-item:nth-child(even) .tl-rule {
-  margin-left: auto;
+/* Description — hidden by default */
+.tl-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  color: var(--mist);
+  transition: max-height 0.55s ease, opacity 0.4s ease, margin-top 0.4s ease;
 }
 
-.timeline-item:nth-child(even) .tl-title,
-.timeline-item:nth-child(even) .tl-body {
-  text-align: right;
+/* ── HOVER REVEAL ── */
+
+.tl-title:hover { color: var(--deep-rose); }
+
+.tl-title:hover ~ .tl-body {
+  max-height: 280px;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+.timeline-item:has(.tl-title:hover) .tl-diamond {
+  background: var(--dusty-rose);
+  border-color: var(--deep-rose);
 }

@@ -1,3 +1,9 @@
+/* ── FIXED BACKGROUND ── */
+
+body {
+  background: var(--ivory);
+}
+
 /* ── NAV ── */
 
 nav {
@@ -13,18 +19,28 @@ nav {
   border-bottom: 1px solid var(--parchment);
 }
 
-/* .title: font-family, font-weight, letter-spacing inherited */
 .nav-logo {
-  font-size: 26px;
-  color: var(--bark);
   text-decoration: none;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 55px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  flex: 1;
 }
+
+.nav-links--left  { justify-content: flex-end; padding-right: 2.5rem; }
+.nav-links--right { justify-content: flex-start; padding-left: 2.5rem; }
 
 /* .nav-link: all type inherited */
 .nav-links a {
@@ -43,30 +59,17 @@ nav {
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
-  background: var(--bark);
+  background: transparent;
 }
 
 .hero-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background-image: url('../images/couple/hero-bg.png');
+  z-index: -1;
+  background-image: url('../images/couple/hero-bg-2.png');
   background-size: cover;
   background-position: left top;
   background-repeat: no-repeat;
-  z-index: 0;
-}
-
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(250,247,242,0) 30%,
-    rgba(250,247,242,0.55) 52%,
-    rgba(250,247,242,0.92) 68%,
-    rgba(250,247,242,0.98) 100%
-  );
 }
 
 .hero-content {
@@ -209,9 +212,64 @@ nav {
   margin-top: 4px;
 }
 
+/* ── VENUE ── */
+
+.venue-section {
+  background: url('../images/couple/hero-bg-2.png') left top / cover no-repeat fixed;
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+}
+
+.venue-inner {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  border: 0.5px solid var(--blush);
+  background: var(--ivory);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.venue-vine {
+  position: absolute;
+  width: 240px;
+  pointer-events: none;
+  filter: brightness(0) invert(1) sepia(1) saturate(4) hue-rotate(50deg) brightness(0.7);
+  opacity: 0.65;
+}
+
+.venue-vine--top  { top: 0; left: 0; }
+.venue-vine--bottom { bottom: 0; right: 0; transform: rotate(180deg); }
+
+.venue-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 4rem 220px;
+}
+
+.venue-date { color: var(--dusty-rose); }
+
+.venue-at {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--mist);
+}
+
+.venue-name {
+  color: var(--bark);
+  margin: 0.5rem 0 2rem;
+}
+
 /* ── SHARED SECTION STYLES ── */
 
-section { padding: 6rem 2rem; }
+section { padding: 4rem 2rem 6rem; }
 
 .section-inner {
   max-width: 960px;
@@ -306,7 +364,7 @@ p.body {
 
 /* ── OUR STORY ── */
 
-.story-section { background: var(--white); }
+.story-section { background: var(--ivory); }
 
 .story-grid {
   display: grid;
@@ -384,85 +442,82 @@ p.body {
 
 /* ── EVENTS ── */
 
-.events-section { background: var(--linen); }
+.events-section { background: var(--ivory); }
 
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
-  margin-top: 3rem;
-  border: 1.5px solid var(--blush);
-}
+.events-wide { max-width: 1100px; }
 
-.event-card {
-  padding: 2.5rem 2rem;
-  background: var(--ivory);
+.h-timeline {
   position: relative;
-  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  margin: 3.5rem 0 2.5rem;
 }
-.event-card:hover { background: var(--white); }
 
-.event-accent-bar {
+.h-timeline::before {
+  content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--dusty-rose);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-.event-card:hover .event-accent-bar { transform: scaleX(1); }
-
-/* .subheading: font-family, font-weight, text-transform inherited; override size + tracking */
-.event-num {
-  color: var(--dusty-rose);
-  display: block;
-  margin-bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  top: calc(2.75rem + 4px);
+  height: 0.5px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--blush) 3%,
+    var(--blush) 97%,
+    transparent
+  );
+  z-index: 0;
 }
 
-/* .heading: font-family, font-weight inherited; override size + line-height */
-.event-name {
-  line-height: var(--leading-snug);
-  color: var(--bark);
-  margin-bottom: 0.5rem;
-}
-
-/* .subheading: font-family, font-weight, text-transform inherited; override size */
-.event-date {
-  color: var(--dusty-rose);
-  margin-bottom: 1.25rem;
-  display: block;
-}
-
-/* .paragraph: font-family inherited; override size, font-weight, line-height */
-.event-detail {
-  font-weight: 300;
-  line-height: var(--leading-relaxed);
-  color: var(--mist);
-  margin-bottom: 1.5rem;
-}
-
-/* .subheading: font-family, font-weight, text-transform inherited; override size + tracking */
-.event-tag {
-  display: inline-flex;
+.h-timeline-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
-  color: var(--sage);
-  border: 0.5px solid var(--mist-green);
-  padding: 4px 12px;
-  background: rgba(221,232,216,0.3);
+  padding: 0 0.5rem;
 }
 
-.event-tag-rose {
+.h-tl-time {
+  height: 2.75rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+  text-align: center;
   color: var(--dusty-rose);
-  border-color: var(--blush);
-  background: rgba(247,232,228,0.3);
+}
+
+.h-tl-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.h-tl-diamond {
+  width: 8px;
+  height: 8px;
+  background: var(--ivory);
+  border: 1px solid var(--dusty-rose);
+  transform: rotate(45deg);
+}
+
+.h-tl-name {
+  padding-top: 0.75rem;
+  text-align: center;
+  color: var(--bark);
+}
+
+.events-cta {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 /* ── TRAVEL ── */
 
-.travel-section { background: var(--linen); }
+.travel-section { background: var(--ivory); }
 
 .travel-grid {
   display: grid;
@@ -527,7 +582,7 @@ p.body {
 /* ── RSVP ── */
 
 .rsvp-section {
-  background: var(--bark);
+  background: var(--ivory);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -539,7 +594,7 @@ p.body {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  border: 0.5px solid rgba(237,207,200,0.08);
+  border: 0.5px solid rgba(212,145,122,0.1);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -550,16 +605,16 @@ p.body {
   width: 520px;
   height: 520px;
   border-radius: 50%;
-  border: 0.5px solid rgba(237,207,200,0.06);
+  border: 0.5px solid rgba(212,145,122,0.08);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .rsvp-section .section-inner  { position: relative; z-index: 1; }
 .rsvp-section .eyebrow         { color: var(--dusty-rose); }
-.rsvp-section .section-heading { color: var(--linen); }
-.rsvp-section .thin-rule       { background: rgba(237,207,200,0.2); margin: 1.5rem auto; }
-.rsvp-section p.body           { color: rgba(242,235,224,0.5); margin: 0 auto 2.5rem; }
+.rsvp-section .section-heading { color: var(--bark); }
+.rsvp-section .thin-rule       { background: var(--blush); margin: 1.5rem auto; }
+.rsvp-section p.body           { color: var(--mist); margin: 0 auto 2.5rem; }
 
 .rsvp-form {
   display: flex;
@@ -574,13 +629,13 @@ p.body {
   font-family: var(--font-body);
   font-weight: 300;
   padding: 1rem 1.25rem;
-  border: 0.5px solid rgba(237,207,200,0.2);
-  background: rgba(250,247,242,0.06);
-  color: var(--linen);
+  border: 0.5px solid var(--blush);
+  background: var(--white);
+  color: var(--bark);
   outline: none;
   transition: border-color 0.2s;
 }
-.rsvp-input::placeholder { color: rgba(242,235,224,0.3); }
+.rsvp-input::placeholder { color: var(--mist); opacity: 0.5; }
 .rsvp-input:focus         { border-color: var(--dusty-rose); }
 
 /* .btn-text: all type inherited
@@ -616,9 +671,16 @@ footer {
 
 /* .title: font-family inherited; override size + color */
 .footer-logo {
-  color: var(--blush);
   display: block;
   margin-bottom: 0.75rem;
+}
+
+.footer-logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer-links {

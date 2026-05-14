@@ -295,8 +295,8 @@
     gap: 2rem;
   }
 
-  /* Image always appears after text on mobile */
-  .travel-two-col--img-first .travel-text-col { order: unset; }
+  /* Text always appears before image on mobile */
+  .travel-two-col--img-first .travel-text-col { order: -1; }
   .travel-two-col--img-first .travel-img-col  { order: unset; }
 
   /* Flying-in nested two-col */

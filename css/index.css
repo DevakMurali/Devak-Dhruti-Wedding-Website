@@ -62,6 +62,35 @@ nav {
   background: transparent;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  padding: 6rem 3rem 6rem 0;
+  margin-right: 7vw;
+  max-width: 560px;
+}
+
+/* mobile-only panels */
+.hero-intro {
+  display: none;
+  min-height: 90vh;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  padding: 0;
+}
+
+.hero-details {
+  display: none;
+  min-height: 70vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+}
+
 .hero-bg {
   position: fixed;
   inset: 0;
@@ -72,13 +101,29 @@ nav {
   background-repeat: no-repeat;
 }
 
-.hero-content {
+.hero-intro-box {
   position: relative;
   z-index: 2;
   text-align: right;
-  padding: 6rem 3rem 6rem 0;
+  padding: 3rem 3rem 4rem;
+  margin-right: 7vw;
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+  background: rgba(250,247,242,0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.hero-details-inner {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  padding: 4rem 3rem;
   margin-right: 7vw;
   max-width: 560px;
+  background: rgba(250,247,242,0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 /* .subheading: font-family, font-weight, text-transform inherited; override size + tracking */
@@ -218,6 +263,8 @@ nav {
   background: url('../images/couple/hero-bg-2.png') left top / cover no-repeat fixed;
   padding: 4rem 2rem 5rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .venue-inner {
@@ -874,32 +921,74 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotat
   .nav-links {
     display: none;
     order: 3;
-    width: 100%;
+    flex: 0 0 100%;
     flex-direction: column;
     gap: 0;
-    padding: 0.5rem 0 1rem;
+    padding: 0;
+    border: none;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  .nav-links--left {
+    padding: 0.75rem 0 0;
     border-top: 0.5px solid var(--parchment);
     margin-top: 0.75rem;
   }
-  .nav-links--left,
-  .nav-links--right { justify-content: flex-start; padding: 0; }
-  .nav-links li a { display: block; padding: 0.6rem 0; }
+  .nav-links--right {
+    padding: 0 0 0.75rem;
+  }
+  .nav-links li { width: 100%; }
+  .nav-links li a { display: block; padding: 0.55rem 0; }
   nav.nav-open .nav-links { display: flex; }
 
   /* ── HERO ── */
-  .hero { justify-content: center; }
-  .hero-content {
-    text-align: center;
-    padding: 7rem 1.5rem 5rem;
-    margin-right: 0;
-    max-width: 100%;
+  .hero { display: none; }
+  .hero-bg {
+    background-image: url('../images/couple/hero-bg-vertical.png');
+    background-position: center top;
   }
-  .hero-divider { justify-content: center; }
-  .hero-cta { justify-content: center; flex-wrap: wrap; }
+  .hero-intro {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5rem 2.5rem;
+  }
+  .hero-intro-box {
+    text-align: center;
+    padding: 1.75rem 1.5rem 2rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    max-width: 420px;
+    width: 100%;
+  }
+  .hero-eyebrow { margin-bottom: 0.5rem; }
+  .hero-details {
+    display: flex;
+    min-height: 60vh;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1.5rem;
+  }
+  .hero-details .countdown-bar {
+    position: static;
+    padding-bottom: 0;
+  }
+  .hero-details-inner {
+    text-align: center;
+    padding: 2rem 1.75rem 2.25rem;
+    margin-right: 0;
+    max-width: 420px;
+    width: 100%;
+  }
+  .hero-divider { justify-content: center; margin: 0.9rem 0; }
+  .hero-cta { justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
   .countdown-bar { gap: 0.5rem; padding: 0 1rem 1.5rem; }
   .countdown-unit { padding: 0.5rem 0.75rem; min-width: 60px; }
 
   /* ── VENUE ── */
+  .venue-section { background: transparent; }
   .venue-content { padding: 3rem 1.5rem; }
 
   /* ── SHARED SECTIONS ── */
@@ -940,7 +1029,8 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotat
 
 /* ── 480px ── */
 @media (max-width: 480px) {
-  .hero-content { padding: 6rem 1rem 4rem; }
+  .hero-intro-box { padding: 2rem 1rem 2.5rem; }
+  .hero-details-inner { padding: 2.5rem 1.25rem; max-width: 100%; }
   .countdown-bar { flex-wrap: wrap; justify-content: center; gap: 0.4rem; }
   .countdown-unit { min-width: 55px; }
   section { padding: 2.5rem 1rem 3.5rem; }

@@ -175,13 +175,15 @@ body {
 @media (max-width: 768px) {
   .title      { font-size: 72px; }
   .title-lg   { font-size: 42px; }
+  .heading    { font-size: 36px; }
   .heading-sm { font-size: 24px; }
   .subheading { font-size: 13px; letter-spacing: var(--tracking-lg); }
-  .subtitle   { font-size: 13px; }
+  .subtitle   { font-size: 14px; }
 }
 
 @media (max-width: 480px) {
-  .title      { font-size: 56px; }
+  .title      { font-size: 54px; }
   .title-lg   { font-size: 34px; }
-  .heading-sm { font-size: 22px; }
+  .heading    { font-size: 30px; }
+  .heading-sm { font-size: 21px; }
 }

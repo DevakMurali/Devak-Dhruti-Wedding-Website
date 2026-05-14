@@ -8,14 +8,8 @@ if (navToggle && navEl) {
   });
 }
 
-// Countdown to wedding date
-const cdDays  = document.getElementById('cd-days');
-const cdHours = document.getElementById('cd-hours');
-const cdMins  = document.getElementById('cd-mins');
-const cdSecs  = document.getElementById('cd-secs');
-
+// Countdown to wedding date — updates both desktop and mobile countdown bars
 function updateCountdown() {
-  if (!cdDays) return;
   const wedding = new Date('2026-11-22T17:00:00');
   const diff = wedding - new Date();
   if (diff <= 0) return;
@@ -25,10 +19,10 @@ function updateCountdown() {
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
 
-  cdDays.textContent  = String(d).padStart(2, '0');
-  cdHours.textContent = String(h).padStart(2, '0');
-  cdMins.textContent  = String(m).padStart(2, '0');
-  cdSecs.textContent  = String(s).padStart(2, '0');
+  document.querySelectorAll('[data-cd="days"]').forEach(el  => el.textContent = String(d).padStart(2, '0'));
+  document.querySelectorAll('[data-cd="hours"]').forEach(el => el.textContent = String(h).padStart(2, '0'));
+  document.querySelectorAll('[data-cd="mins"]').forEach(el  => el.textContent = String(m).padStart(2, '0'));
+  document.querySelectorAll('[data-cd="secs"]').forEach(el  => el.textContent = String(s).padStart(2, '0'));
 }
 
 updateCountdown();

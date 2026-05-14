@@ -13,6 +13,9 @@
 </head>
 <body>
 
+  <!-- FIXED HERO BACKGROUND (always in DOM, position:fixed) -->
+  <div class="hero-bg"></div>
+
   <!-- NAV -->
   <nav>
     <ul class="nav-links nav-links--left">
@@ -31,9 +34,8 @@
     </button>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO (desktop) -->
   <section class="hero">
-    <div class="hero-bg"></div>
     <div class="hero-content">
       <span class="hero-eyebrow subtitle">We're getting married</span>
       <h1 class="hero-title title">Dhruti &amp; Devak</h1>
@@ -51,19 +53,62 @@
     </div>
     <div class="countdown-bar">
       <div class="countdown-unit">
-        <span class="countdown-num heading-sm" id="cd-days">--</span>
+        <span class="countdown-num heading-sm" data-cd="days">--</span>
         <span class="countdown-label subheading">Days</span>
       </div>
       <div class="countdown-unit">
-        <span class="countdown-num heading-sm" id="cd-hours">--</span>
+        <span class="countdown-num heading-sm" data-cd="hours">--</span>
         <span class="countdown-label subheading">Hours</span>
       </div>
       <div class="countdown-unit">
-        <span class="countdown-num heading-sm" id="cd-mins">--</span>
+        <span class="countdown-num heading-sm" data-cd="mins">--</span>
         <span class="countdown-label subheading">Minutes</span>
       </div>
       <div class="countdown-unit">
-        <span class="countdown-num heading-sm" id="cd-secs">--</span>
+        <span class="countdown-num heading-sm" data-cd="secs">--</span>
+        <span class="countdown-label subheading">Seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO INTRO (mobile only) — title at bottom of first viewport -->
+  <section class="hero-intro">
+    <div class="hero-intro-box">
+      <span class="hero-eyebrow subtitle">We're getting married</span>
+      <h1 class="hero-title title">Dhruti &amp; Devak</h1>
+    </div>
+  </section>
+
+  <!-- HERO DETAILS (mobile only) — date + CTA + countdown -->
+  <section class="hero-details">
+    <div class="hero-details-inner">
+      <div class="hero-divider">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-diamond"></div>
+        <div class="hero-divider-line"></div>
+      </div>
+      <span class="hero-date subtitle">November 22, 2026</span>
+      <span class="hero-location subtitle">Hanover, Maryland</span>
+      <div class="hero-cta">
+        <a href="rsvp.html" class="btn btn-primary btn-text">RSVP</a>
+        <a href="events.html" class="btn btn-outline btn-text">View Events</a>
+      </div>
+    </div>
+    <div class="countdown-bar">
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" data-cd="days">--</span>
+        <span class="countdown-label subheading">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" data-cd="hours">--</span>
+        <span class="countdown-label subheading">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" data-cd="mins">--</span>
+        <span class="countdown-label subheading">Minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num heading-sm" data-cd="secs">--</span>
         <span class="countdown-label subheading">Seconds</span>
       </div>
     </div>

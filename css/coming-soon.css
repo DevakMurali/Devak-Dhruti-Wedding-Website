@@ -1,0 +1,82 @@
+/* ── PAGE HEADER ── */
+
+.cs-header {
+  padding: 9rem 2rem 6rem;
+  text-align: center;
+  background: var(--bark);
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-header-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 0.5px solid rgba(237,207,200,0.07);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.cs-header-ring-1 { width: 700px; height: 700px; }
+.cs-header-ring-2 { width: 460px; height: 460px; }
+
+.cs-header-inner { position: relative; z-index: 1; }
+
+.cs-eyebrow {
+  color: var(--dusty-rose);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.cs-title {
+  color: var(--linen);
+  display: block;
+}
+
+.cs-header-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 2rem 0 0;
+}
+
+.cs-header-line {
+  width: 52px;
+  height: 0.5px;
+  background: rgba(237,207,200,0.25);
+}
+
+.cs-header-diamond {
+  width: 5px;
+  height: 5px;
+  background: var(--dusty-rose);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ── COMING SOON BODY ── */
+
+.cs-body {
+  background: var(--ivory);
+  padding: 9rem 2rem;
+  text-align: center;
+}
+
+.cs-content {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.cs-badge {
+  display: inline-block;
+  color: var(--dusty-rose);
+  border: 0.5px solid var(--blush);
+  padding: 0.45rem 1.5rem;
+}
+
+.cs-message { color: var(--mist); }

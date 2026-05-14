@@ -18,25 +18,37 @@
   <nav>
     <ul class="nav-links nav-links--left">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="index.html#story" class="nav-link">Our Story</a></li>
+      <li><a href="story.html" class="nav-link">Our Story</a></li>
       <li><a href="events.html" class="nav-link">Events</a></li>
     </ul>
     <a href="index.html" class="nav-logo"><img src="images/gallery/logo.png" alt="D & D"></a>
     <ul class="nav-links nav-links--right">
-      <li><a href="index.html#travel" class="nav-link">Location &amp; Travel</a></li>
+      <li><a href="travel.html" class="nav-link">Location &amp; Travel</a></li>
       <li><a href="rsvp.html" class="nav-link">RSVP</a></li>
-      <li><a href="rsvp.html" class="nav-link">Registry</a></li>
+      <li><a href="registry.html" class="nav-link">Registry</a></li>
     </ul>
   </nav>
 
   <!-- RSVP EMBED -->
   <main class="rsvp-page">
+
+    <div class="rsvp-loader" id="rsvp-loader">
+      <img class="rsvp-loader-logo" src="images/gallery/logo.png" alt="D &amp; D">
+      <div class="rsvp-loader-diamond-row">
+        <div class="rsvp-loader-line"></div>
+        <div class="rsvp-loader-spinner"></div>
+        <div class="rsvp-loader-line"></div>
+      </div>
+    </div>
+
     <iframe
       id="rsvp-embed"
       src="https://script.google.com/macros/s/AKfycbwuHt4mty4l7JPsliJ7d04wX80ryEpkl3lr65ASvvggRcqFkJwHaRlOm_0_bldxtNlL/exec"
       frameborder="0"
       allowfullscreen
+      onload="document.getElementById('rsvp-loader').classList.add('loaded')"
     ></iframe>
+
   </main>
 
 </body>

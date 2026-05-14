@@ -80,3 +80,9 @@
 }
 
 .cs-message { color: var(--mist); }
+
+@media (max-width: 768px) {
+  .cs-header { padding: 6rem 1.5rem 4rem; }
+  .cs-header-ring { display: none; }
+  .cs-body { padding: 5rem 1.5rem; }
+}

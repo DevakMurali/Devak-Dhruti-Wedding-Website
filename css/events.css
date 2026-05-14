@@ -273,3 +273,39 @@
   background: var(--dusty-rose);
   border-color: var(--deep-rose);
 }
+
+/* ═══════════════════════════════════════
+   MOBILE — 768px
+═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .events-header { padding: 6rem 1.5rem 4rem; }
+  .events-photo-banner { height: 220px; }
+
+  .timeline-section { padding: 3rem 1.5rem 4rem; }
+  .timeline-layout { grid-template-columns: 1fr; }
+  .timeline-right { display: none; }
+  .timeline-hint { text-align: left; margin-bottom: 2rem; }
+
+  /* Left-side spine */
+  .timeline::before { left: 3px; transform: none; }
+
+  /* All items left-aligned, remove alternating */
+  .tl-blank { display: none; }
+  .tl-main { text-align: left; padding-right: 0; padding-left: 1.25rem; }
+  .tl-main::after { display: none; }
+  .tl-mark { padding-top: 0.2rem; flex: 0 0 8px; }
+
+  .timeline-item:nth-child(even) .tl-main {
+    order: unset;
+    text-align: left;
+    padding-left: 1.25rem;
+    padding-right: 0;
+  }
+  .timeline-item:nth-child(even) .tl-main::after { display: none; }
+  .timeline-item:nth-child(even) .tl-blank { display: none; }
+  .timeline-item:nth-child(even) .tl-mark { order: unset; }
+
+  /* Always show descriptions on touch (no hover) */
+  .tl-body { max-height: none; opacity: 1; margin-top: 0.5rem; }
+}

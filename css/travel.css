@@ -280,3 +280,40 @@
   color: var(--bark);
   margin-bottom: 1rem;
 }
+
+/* ═══════════════════════════════════════
+   MOBILE — 768px
+═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .travel-header { padding: 6rem 1.5rem 4rem; }
+  .travel-header-ring { display: none; }
+
+  /* All two-column layouts → single column */
+  .travel-two-col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Image always appears after text on mobile */
+  .travel-two-col--img-first .travel-text-col { order: unset; }
+  .travel-two-col--img-first .travel-img-col  { order: unset; }
+
+  /* Flying-in nested two-col */
+  .travel-flying-col { margin-top: 2rem; }
+
+  /* Map */
+  .travel-map-frame iframe { height: 280px; }
+
+  /* Address bar */
+  .travel-address-bar { margin-bottom: 1.5rem; }
+
+  /* Airport badges — wrap on very small screens */
+  .travel-airport-row { flex-wrap: wrap; }
+
+  /* Dress grid */
+  .travel-dress-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* Floorplan */
+  .travel-floorplan-block { margin-top: 2.5rem; padding-top: 2rem; }
+}

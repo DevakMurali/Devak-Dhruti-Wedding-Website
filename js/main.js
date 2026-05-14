@@ -1,3 +1,13 @@
+// Mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navEl = document.querySelector('nav');
+if (navToggle && navEl) {
+  navToggle.addEventListener('click', () => navEl.classList.toggle('nav-open'));
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => navEl.classList.remove('nav-open'));
+  });
+}
+
 // Countdown to wedding date
 const cdDays  = document.getElementById('cd-days');
 const cdHours = document.getElementById('cd-hours');

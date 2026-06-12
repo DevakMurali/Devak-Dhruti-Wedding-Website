@@ -996,6 +996,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotat
   /* ── VENUE ── */
   .venue-section { background: transparent; }
   .venue-content { padding: 3rem 1.5rem; }
+  .venue-vine { filter: brightness(0) invert(1) sepia(1) saturate(0.8) hue-rotate(50deg) brightness(0.7); }
 
   /* ── SHARED SECTIONS ── */
   section { padding: 3rem 1.5rem 4rem; }
@@ -1023,7 +1024,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotat
 
   /* ── STORY ── */
   .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .story-img { order: -1; }
+  .story-img { order: 2; }
   .story-img::before { display: none; }
 
   /* ── FAQ ── */

@@ -8,24 +8,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/travel.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/travel.css">
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
     <ul class="nav-links nav-links--left">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="story.html" class="nav-link">Our Story</a></li>
-      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="../" class="nav-link">Home</a></li>
+      <li><a href="../story/" class="nav-link">Our Story</a></li>
+      <li><a href="../events/" class="nav-link">Events</a></li>
     </ul>
-    <a href="index.html" class="nav-logo"><img src="images/gallery/logo.png" alt="D & D"></a>
+    <a href="../" class="nav-logo"><img src="../images/gallery/logo.png" alt="D & D"></a>
     <ul class="nav-links nav-links--right">
-      <li><a href="travel.html" class="nav-link">Location &amp; Travel</a></li>
-      <li><a href="rsvp.html" class="nav-link">RSVP</a></li>
-      <li><a href="registry.html" class="nav-link">Registry</a></li>
+      <li><a href="../travel/" class="nav-link">Location &amp; Travel</a></li>
+      <li><a href="../rsvp/" class="nav-link">RSVP</a></li>
+      <li><a href="../registry/" class="nav-link">Registry</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
@@ -55,10 +55,10 @@
 
         <div class="travel-text-col">
           <span class="eyebrow subheading reveal">The Venue</span>
-          <h2 class="section-heading heading reveal">Maryland Live! <em>Casino</em></h2>
+          <h2 class="section-heading heading reveal">Maryland Live! <em>Casino &amp; Hotel</em></h2>
           <div class="thin-rule reveal"></div>
           <p class="body paragraph reveal">All of our wedding celebrations will take place at Maryland Live! Casino &amp; Hotel in Hanover, Maryland — a premier event destination in the heart of the Arundel Mills corridor, situated just 15 minutes from Baltimore and 30 minutes from Washington, D.C.</p>
-          <p class="body paragraph reveal reveal-delay-1" style="margin-top:1rem;">All events are held within the <strong>Event Center</strong> at Maryland Live! — a dedicated venue space with its own entrance, completely separate from the casino floor.</p>
+          <p class="body paragraph reveal reveal-delay-1" style="margin-top:1rem;">All events are held within the <strong>Event Center</strong> at Maryland Live! Casino &amp; Hotel — a dedicated venue space with its own entrance, completely separate from the casino floor.</p>
           <div class="travel-address-block reveal reveal-delay-2">
             <span class="travel-address-label subheading">Event Center</span>
             <p class="paragraph">7002 Arundel Mills Cir #7777<br>Hanover, MD 21076</p>
@@ -66,14 +66,14 @@
         </div>
 
         <div class="travel-img-col reveal">
-          <img class="travel-photo" src="images/venue/venue-building.png" alt="Maryland Live! Casino &amp; Hotel"
+          <img class="travel-photo" src="../images/venue/venue-building.png" alt="Maryland Live! Casino &amp; Hotel"
                onerror="this.parentElement.classList.add('travel-photo-missing')">
         </div>
 
       </div>
 
       <div class="travel-floorplan-block reveal">
-        <img class="travel-floorplan-img" src="images/venue/venue-layout.png" alt="Maryland Live! Event Center floor map"
+        <img class="travel-floorplan-img" src="../images/venue/venue-layout.png" alt="Maryland Live! Casino &amp; Hotel Event Center floor map"
              onerror="this.style.display='none'">
         <p class="travel-floorplan-caption paragraph">Event Center floor map — the hall is marked at the top of the complex, with its own dedicated entrance.</p>
       </div>
@@ -104,7 +104,7 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Maryland Live! Casino Hotel map">
+          title="Maryland Live! Casino &amp; Hotel map">
         </iframe>
       </div>
 
@@ -120,23 +120,23 @@
             <div class="travel-airport-row">
               <div class="travel-airport-badge travel-airport-badge--primary">
                 <span class="travel-airport-code heading-sm">BWI</span>
-                <span class="travel-airport-detail paragraph">8 miles · ~15 min · Recommended</span>
+                <span class="travel-airport-detail paragraph">8 miles · Recommended</span>
               </div>
             </div>
             <div class="travel-airport-row">
               <div class="travel-airport-badge">
                 <span class="travel-airport-code heading-sm">DCA</span>
-                <span class="travel-airport-detail paragraph">35 miles · ~35 min</span>
+                <span class="travel-airport-detail paragraph">35 miles</span>
               </div>
               <div class="travel-airport-badge">
                 <span class="travel-airport-code heading-sm">IAD</span>
-                <span class="travel-airport-detail paragraph">45 miles · ~45 min</span>
+                <span class="travel-airport-detail paragraph">45 miles</span>
               </div>
             </div>
           </div>
         </div>
         <div class="travel-img-col reveal">
-          <img class="travel-photo" src="images/venue/bwi-airport.png" alt="Baltimore/Washington International Airport"
+          <img class="travel-photo" src="../images/venue/bwi-airport.png" alt="Baltimore/Washington International Airport"
                onerror="this.parentElement.classList.add('travel-photo-missing')">
         </div>
       </div>
@@ -144,21 +144,42 @@
     </div>
   </section>
 
-  <!-- FINDING THE ENTRANCE -->
-  <section class="travel-section section--left">
+  <!-- WHERE TO PARK -->
+  <section class="travel-section section--right" id="parking">
     <div class="section-inner">
       <div class="travel-two-col travel-two-col--img-first">
 
         <div class="travel-img-col reveal">
-          <img class="travel-photo" src="images/venue/venue-entrance.png" alt="Aerial view of the Event Center entrance"
+          <img class="travel-photo" src="../images/venue/venue-parking.png" alt="Aerial view of Event Center parking"
                onerror="this.parentElement.classList.add('travel-photo-missing')">
         </div>
+
+        <div class="travel-text-col">
+          <span class="eyebrow subheading reveal">On-Site Parking</span>
+          <h2 class="section-heading heading reveal">Where to <em>Park</em></h2>
+          <div class="thin-rule reveal"></div>
+          <p class="body paragraph reveal">For the most convenient arrival, park in the <strong>surface lot directly adjacent to the Event Center</strong> — your best bet for a short, straightforward walk in. It may look like a Costco lot, and that's because Costco shares the Arundel Mills complex, but this area is owned and operated by Maryland Live! Casino &amp; Hotel and is reserved for Event Center guests. You'll see Maryland Live! Casino &amp; Hotel signage once you're in it.</p>
+          <p class="body paragraph reveal reveal-delay-1" style="margin-top:1rem;">A large multi-level covered garage is also available on property. Depending on where you enter, you may need to walk through part of the building to reach the Event Center — just ask any staff member for directions and they'll be glad to help.</p>
+          <div class="travel-parking-note reveal reveal-delay-2">
+            <span class="travel-parking-note-icon">🅿️</span>
+            <p class="paragraph">All parking on site is <strong>complimentary</strong> for Event Center guests.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDING THE ENTRANCE -->
+  <section class="travel-section travel-alt section--left">
+    <div class="section-inner">
+      <div class="travel-two-col">
 
         <div class="travel-text-col">
           <span class="eyebrow subheading reveal">Navigation Tip</span>
           <h2 class="section-heading heading reveal">Finding the <em>Entrance</em></h2>
           <div class="thin-rule reveal"></div>
-          <p class="body paragraph reveal">Most navigation apps will route you to one of Maryland Live!'s many entrances — but for the Event Center specifically, you'll want to use these coordinates directly in your maps app:</p>
+          <p class="body paragraph reveal">Most navigation apps will route you to one of Maryland Live! Casino &amp; Hotel's many entrances — but for the Event Center specifically, you'll want to use these coordinates directly in your maps app:</p>
           <div class="travel-coordinates reveal reveal-delay-1">
             <span class="travel-coord-label paragraph">Event Center Entrance Coordinates</span>
             <span class="travel-coord-value subheading">39.15675, -76.72833</span>
@@ -167,29 +188,8 @@
           <p class="body paragraph reveal reveal-delay-2">If you do end up at the wrong entrance, any staff member on site will happily point you in the right direction.</p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- WHERE TO PARK -->
-  <section class="travel-section travel-alt section--right" id="parking">
-    <div class="section-inner">
-      <div class="travel-two-col">
-
-        <div class="travel-text-col">
-          <span class="eyebrow subheading reveal">On-Site Parking</span>
-          <h2 class="section-heading heading reveal">Where to <em>Park</em></h2>
-          <div class="thin-rule reveal"></div>
-          <p class="body paragraph reveal">For the most convenient arrival, park in the <strong>surface lot directly adjacent to the Event Center</strong> — your best bet for a short, straightforward walk in. It may look like a Costco lot, and that's because Costco shares the Arundel Mills complex, but this area is owned and operated by Maryland Live! and is reserved for Event Center guests. You'll see Maryland Live! signage once you're in it.</p>
-          <p class="body paragraph reveal reveal-delay-1" style="margin-top:1rem;">A large multi-level covered garage is also available on property. Depending on where you enter, you may need to walk through part of the building to reach the Event Center — just ask any staff member for directions and they'll be glad to help.</p>
-          <div class="travel-parking-note reveal reveal-delay-2">
-            <span class="travel-parking-note-icon">🅿️</span>
-            <p class="paragraph">All parking on site is <strong>complimentary</strong> for Event Center guests.</p>
-          </div>
-        </div>
-
         <div class="travel-img-col reveal">
-          <img class="travel-photo" src="images/venue/venue-parking.png" alt="Aerial view of Event Center parking"
+          <img class="travel-photo" src="../images/venue/venue-entrance.png" alt="Aerial view of the Event Center entrance"
                onerror="this.parentElement.classList.add('travel-photo-missing')">
         </div>
 
@@ -206,7 +206,7 @@
           <span class="eyebrow subheading reveal">Accommodations</span>
           <h2 class="section-heading heading reveal">Where to <em>Stay</em></h2>
           <div class="thin-rule reveal"></div>
-          <p class="body paragraph reveal">We've secured a discounted room block at the <strong>Maryland Live! Casino Hotel</strong> — the very same property as all our celebrations — exclusively for our guests. Staying on-site means no driving after the festivities and more time with the people you love.</p>
+          <p class="body paragraph reveal">We've secured a discounted room block at the <strong>Maryland Live! Casino &amp; Hotel</strong> — the very same property as all our celebrations — exclusively for our guests. Staying on-site means no driving after the festivities and more time with the people you love.</p>
           <p class="body paragraph reveal reveal-delay-1" style="margin-top:1rem;">To book at the discounted rate, click the link below and select <strong>"Attendee"</strong> from the guest type dropdown, then choose your dates, number of rooms, and number of guests.</p>
           <div class="travel-stay-callout reveal reveal-delay-2">
             <p class="paragraph">Rooms are limited — we recommend booking as early as possible.</p>
@@ -215,7 +215,7 @@
         </div>
 
         <div class="travel-img-col reveal">
-          <img class="travel-photo" src="images/venue/venue-room.png" alt="Maryland Live! Casino Hotel room"
+          <img class="travel-photo" src="../images/venue/venue-room.png" alt="Maryland Live! Casino &amp; Hotel room"
                onerror="this.parentElement.classList.add('travel-photo-missing')">
         </div>
 
@@ -225,17 +225,17 @@
 
   <!-- FOOTER -->
   <footer>
-    <span class="footer-logo"><img src="images/gallery/logo.png" alt="D & D"></span>
+    <span class="footer-logo"><img src="../images/gallery/logo.png" alt="D & D"></span>
     <ul class="footer-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="events.html" class="nav-link">Events</a></li>
-      <li><a href="travel.html" class="nav-link">Travel</a></li>
-      <li><a href="story.html" class="nav-link">Our Story</a></li>
-      <li><a href="rsvp.html" class="nav-link">RSVP</a></li>
+      <li><a href="../" class="nav-link">Home</a></li>
+      <li><a href="../events/" class="nav-link">Events</a></li>
+      <li><a href="../travel/" class="nav-link">Travel</a></li>
+      <li><a href="../story/" class="nav-link">Our Story</a></li>
+      <li><a href="../rsvp/" class="nav-link">RSVP</a></li>
     </ul>
     <p class="footer-text subtitle">Dhruti &amp; Devak · November 22, 2026 · Hanover, Maryland</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

@@ -270,7 +270,7 @@
 .tl-title:hover { color: var(--deep-rose); }
 
 .tl-title:hover ~ .tl-body {
-  max-height: 280px;
+  max-height: 500px;
   opacity: 1;
   margin-top: 0.75rem;
 }

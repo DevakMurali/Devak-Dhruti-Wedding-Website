@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Groups · Dhruti &amp; Devak</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/rsvp.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul class="nav-links nav-links--left">
+      <li><a href="../" class="nav-link">Home</a></li>
+      <li><a href="../story/" class="nav-link">Our Story</a></li>
+      <li><a href="../events/" class="nav-link">Events</a></li>
+    </ul>
+    <a href="../" class="nav-logo"><img src="../images/gallery/logo.png" alt="D & D"></a>
+    <ul class="nav-links nav-links--right">
+      <li><a href="../travel/" class="nav-link">Location &amp; Travel</a></li>
+      <li><a href="../rsvp/" class="nav-link">RSVP</a></li>
+      <li><a href="../registry/" class="nav-link">Registry</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PHOTO GROUPS EMBED -->
+  <main class="rsvp-page">
+
+    <div class="rsvp-loader" id="rsvp-loader">
+      <img class="rsvp-loader-logo" src="../images/gallery/logo.png" alt="D &amp; D">
+      <div class="rsvp-loader-diamond-row">
+        <div class="rsvp-loader-line"></div>
+        <div class="rsvp-loader-spinner"></div>
+        <div class="rsvp-loader-line"></div>
+      </div>
+    </div>
+
+    <iframe
+      id="rsvp-embed"
+      src="https://script.google.com/macros/s/AKfycbxpnMexvXA7Of4bqrFgtYiVDPdw4M3HupX744YyVxm20enP8aFP9GCxHx0_uAMY7p59/exec"
+      frameborder="0"
+      allowfullscreen
+      onload="document.getElementById('rsvp-loader').classList.add('loaded')"
+    ></iframe>
+
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

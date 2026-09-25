@@ -81,8 +81,52 @@
 
 .cs-message { color: var(--mist); }
 
+/* ── REGISTRY ── */
+
+.registry-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registry-single {
+  max-width: 480px;
+  width: 100%;
+  background: var(--linen);
+  border: 0.5px solid var(--blush);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.registry-card-platform {
+  color: var(--dusty-rose);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.registry-card-name {
+  color: var(--bark);
+  line-height: var(--leading-snug);
+}
+
+.registry-card-rule {
+  width: 40px;
+  height: 0.5px;
+  background: var(--blush);
+}
+
+.registry-card-desc {
+  color: var(--mist);
+}
+
 @media (max-width: 768px) {
   .cs-header { padding: 6rem 1.5rem 4rem; }
   .cs-header-ring { display: none; }
   .cs-body { padding: 5rem 1.5rem; }
+
+  .registry-single { padding: 2.5rem 1.75rem; }
 }
